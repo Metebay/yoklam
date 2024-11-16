@@ -1,8 +1,14 @@
 {
-  "public": {
-    "outputDirectory": "public"
-  },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/public/index.html" }
+  "builds": [
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html"
+    }
   ]
 }
